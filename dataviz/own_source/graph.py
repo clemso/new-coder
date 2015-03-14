@@ -19,6 +19,7 @@ def visulize_days(parsed_data):
         counter["Saturday"],
         counter["Sunday"]
     ]
+
     labels = tuple(["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"])
     # y-axis data
     plt.plot(data_list)
@@ -26,6 +27,10 @@ def visulize_days(parsed_data):
     plt.xticks(range(len(labels)), labels)
     plt.savefig("Days.png")
     plt.clf()
+
+
+
+
 
 
 def visulize_type(parsed_data):
@@ -50,7 +55,11 @@ def visulize_type(parsed_data):
 
     # plt.rcParams['figure.figsize'] = 12, 20
     plt.savefig("Type.png")
+
     plt.clf()
+    
+    
+    
 
 
 
@@ -62,8 +71,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
