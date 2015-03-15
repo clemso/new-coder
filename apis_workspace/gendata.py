@@ -1,3 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import tablib
+
+
 def generate_plot(platforms, output_file):
     """
     Creates a Bar Chart file for Platforms
@@ -31,6 +36,7 @@ def generate_plot(platforms, output_file):
     fig.autofmt_xdate()
     plt.grid(True)
     plt.savefig(output_file, dpi = 72)
+    plt.close()
 
 
 def generate_csv(platforms, output_file):

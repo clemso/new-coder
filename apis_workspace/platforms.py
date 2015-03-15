@@ -1,4 +1,7 @@
-class GiantbombAPT(object):
+import requests
+import logging
+
+class GiantbombAPI(object):
     # we want to get platform data, this is the url specified by API
     base_url = "http://www.giantbomb.com/api/platforms/"
 
@@ -6,7 +9,7 @@ class GiantbombAPT(object):
         self.api_key = api_key
 
 
-    def get_platforms(self, sort=None, filter=None, field_list = None):
+    def get_platforms(self, sort=None, filter=None, field_list=None):
         # constructing the params dict for get request
         # depending which arguments are given
         params = {}
